@@ -1,0 +1,199 @@
+.check {
+	background-color: $silver;
+
+	@include adaptiveValue('padding-bottom', 160, 30);
+
+	// .check__container
+	&__container {
+	}
+	// .check__images
+	&__images {
+		position: relative;
+		text-align: center;
+		@media (min-width: 1200px) {
+			padding-top: 115px;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.img-test {
+		display: none;
+		@media (min-width: 1200px) {
+			display: block;
+			position: absolute;
+			right: -375px;
+			top: 40px;
+		}
+	}
+	// .check__info
+	&__info {
+		@media (min-width: 1200px) {
+			padding-top: 40px;
+		}
+	}
+	// .check__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue('font-size', 48, 24);
+		line-height: math.div(64, 48);
+		text-align: center;
+		margin-bottom: 10px;
+		span {
+			color: $accent;
+		}
+	}
+	// .check__text
+	&__text {
+		max-width: 684px;
+		font-weight: 500;
+		@include adaptiveValue('font-size', 16, 12);
+		line-height: math.div(22, 16);
+		text-align: center;
+		margin: 0 auto;
+		color: #9fb7d3;
+		@include adaptiveValue("margin-bottom", 34, 24);
+
+		span {
+			color: $accent;
+		}
+	}
+	// .check__form
+	&__form {
+		position: relative;
+		max-width: 766px;
+		margin: 0 auto;
+        @include adaptiveValue("margin-bottom", 34, 26);
+	}
+
+	&__input {
+		height: 76px;
+		padding: 20px;
+		width: 100%;
+		border-radius: 5px;
+
+		&:focus {
+			outline: 2px solid $accent;
+		}
+
+        &::placeholder {
+            @include adaptiveValue("font-size", 16, 12);
+        }
+
+        @media (max-width: 520px) {
+            height: 60px;
+        }
+	}
+	&__button {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background-color: $accent;
+		border-radius: 5px;
+		padding: 16px 24px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		color: #ffffff;
+
+		span {
+
+            @media (max-width: 520px) {
+                display: none;
+            }
+		}
+
+        @media (max-width: 520px) {
+            height: 40px;
+            padding: 15px;
+        }
+	}
+	&__button-icon {
+		display: none;
+
+        @media (max-width: 520px) {
+            display: block;
+        }
+	}
+
+	// .check__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        max-width: 766px;
+        margin: 0 auto;
+	}
+	// .check__report
+	&__report {
+		font-weight: 700;
+		@include adaptiveValue('font-size', 14, 12);
+		line-height: math.div(19, 14);
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		position: relative;
+		padding-bottom: 7px;
+		img {
+			margin-right: 6px;
+		}
+		span {
+			color: $accent;
+
+			@media (max-width: 520px) {
+				flex-basis: 150px;
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 24px;
+			height: 2px;
+			background-color: $accent;
+
+			@media (max-width: 520px) {
+				width: 150px;
+			}
+		}
+
+		@media (max-width: 520px) {
+			flex-wrap: wrap;
+		}
+	}
+	// .check__social
+	&__social {
+		display: flex;
+		@include adaptiveValue('gap', 30, 20, 1150, 478, 1);
+	}
+	// .check__social-link
+	&__social-link {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue('font-size', 16, 12);
+		line-height: math.div(24, 16);
+
+		img {
+			@media (min-width: 520px) {
+				margin-right: 8px;
+			}
+		}
+		&.vk {
+			font-weight: 700;
+			color: $accent;
+		}
+		&.telegram {
+			font-weight: 700;
+		}
+
+		@media (max-width: 520px) {
+			span {
+				display: none;
+			}
+		}
+	}
+}
