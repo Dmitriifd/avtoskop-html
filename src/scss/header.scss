@@ -100,7 +100,8 @@
 			content: '';
 			transition: width 0.3s linear;
 			position: absolute;
-			left: 0;
+			left: auto;
+            right: 0;
 			bottom: 0;
 			width: 0;
 			height: 2px;
@@ -108,6 +109,8 @@
 		}
 		&:hover {
 			&::before {
+                right: auto;
+                left: 0;
 				width: 100%;
 			}
 		}

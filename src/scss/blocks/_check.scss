@@ -14,14 +14,16 @@
 			padding-top: 115px;
 		}
 		img {
+            user-select: none;
 			max-width: 100%;
 			height: auto;
 		}
 	}
-	.img-test {
+	.check__img {
 		display: none;
 		@media (min-width: 1200px) {
 			display: block;
+            user-select: none;
 			position: absolute;
 			right: -375px;
 			top: 40px;
@@ -29,6 +31,9 @@
 	}
 	// .check__info
 	&__info {
+        position: relative;
+        z-index: 5;
+
 		@media (min-width: 1200px) {
 			padding-top: 40px;
 		}
@@ -97,6 +102,11 @@
 		line-height: 24px;
 		text-align: center;
 		color: #ffffff;
+        transition: background-color 0.2s linear;
+
+        &:hover {
+            background-color: darken($accent, 10%)
+        }
 
 		span {
 
@@ -168,12 +178,20 @@
 	// .check__social
 	&__social {
 		display: flex;
+        position: relative;
+        z-index: 5;
 		@include adaptiveValue('gap', 30, 20, 1150, 478, 1);
 	}
 	// .check__social-link
 	&__social-link {
 		display: flex;
 		align-items: center;
+        transition: transform 0.2s linear;
+
+        &:hover {
+            transform: translateY(-1px);
+        }
+       
 		@include adaptiveValue('font-size', 16, 12);
 		line-height: math.div(24, 16);
 
