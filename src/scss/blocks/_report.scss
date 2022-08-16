@@ -180,6 +180,10 @@
 		border: 1px solid #9fb7d3;
 		border-radius: 5px;
 		padding: 10px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 40px;
+        }
 	}
 	// .report__button
 	&__button {
@@ -194,6 +198,12 @@
 		background-color: #ffffff;
 		box-shadow: 0px 6px 10px rgba(44, 65, 84, 0.25);
 		border-radius: 5px;
+        transition: all 0.3s linear;
+         border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid $accent;
+        }
 
 		@media (max-width: $mobileSmall) {
 			font-size: 12px;
