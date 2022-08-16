@@ -15,8 +15,8 @@
 .statistics__column {
 	flex-basis: 276px;
 
-    @media (max-width: 600px) {
-        flex-basis: 210px;
+    @media (max-width: 615px) {
+        flex-basis: 200px;
     }
 
 	@media (max-width: $mobileSmall) {

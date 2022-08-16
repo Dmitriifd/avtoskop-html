@@ -1,10 +1,16 @@
 .presentation {
-	padding-top: 45px;
-    padding-bottom: 80px;
+	@include adaptiveValue('padding-top', 45, 20);
+	padding-bottom: 80px;
 	// .presentation__container
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		gap: 30px;
+
+		@media (max-width: 1050px) {
+			flex-wrap: wrap-reverse;
+			justify-content: center;
+		}
 	}
 	// .presentation__content
 	&__content {
@@ -16,7 +22,7 @@
 	// .presentation__title
 	&__title {
 		font-weight: 600;
-		@include adaptiveValue('font-size', 34, 16);
+		@include adaptiveValue('font-size', 34, 18);
 		line-height: math.div(48, 34);
 		margin-bottom: em(24, 34);
 
@@ -42,44 +48,60 @@
 		padding-bottom: 24px;
 		margin-bottom: 24px;
 		border-bottom: 1px solid #eff4f7;
+
+		@media (max-width: 655px) {
+			flex-wrap: wrap-reverse;
+		}
 	}
 	// .presentation__card
 	&__card {
 	}
 	// .presentation__buttons
 	&__buttons {
-        display: flex;
-        gap: 16px;
+		display: flex;
+		gap: 16px;
+
+		@media (max-width: 655px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 	// .presentation__button
 	&__button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-weight: 700;
 		line-height: math.div(24, 16);
-        max-width: 326px;
-        width: 100%;
+		max-width: 326px;
+		width: 100%;
 		text-align: center;
 		color: #ffffff;
 		background-color: $accent;
 		border: 1px solid $accent;
 		border-radius: 5px;
-        padding: 16px;
-        transition: background-color 0.2s linear;
+		padding: 16px;
+		transition: background-color 0.2s linear;
 
-        svg {
-            margin-right: 16px;
-        }
+		svg {
+			margin-right: 16px;
+		}
 
-        &:hover {
-            background-color: darken($accent, 10%)
-        }
+		&:hover {
+			background-color: darken($accent, 10%);
+		}
 	}
 	// .presentation__images
 	&__images {
+		text-align: center;
 		img {
-			max-width: 100%;
+			@media (max-width: $mobile) {
+				width: 80%;
+			}
+
+			@media (max-width: $mobileSmall) {
+				width: 190px;
+			}
 		}
 	}
 }
