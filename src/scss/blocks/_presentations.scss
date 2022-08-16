@@ -1,6 +1,6 @@
 .presentation {
 	@include adaptiveValue('padding-top', 45, 20);
-	padding-bottom: 80px;
+	@include adaptiveValue("padding-bottom", 80, 40);
 	// .presentation__container
 	&__container {
 		display: flex;

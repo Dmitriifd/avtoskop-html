@@ -23,7 +23,7 @@ body {
 }
 body {
 	color: $mainColor;
-	line-height: rem(24);
+	line-height: math.div(24, 16);
 	font-family: $fontFamily;
 	font-size: $fontSize;
 	//text-rendering: optimizeLegibility;
