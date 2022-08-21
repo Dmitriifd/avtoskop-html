@@ -15,7 +15,9 @@
 window['FLS'] = false;
 
 // Подключение основного файла стилей
+
 import "../scss/style.scss";
+
 
 // Функционал 
 import * as flsFunctions from "./files/functions.js";
